@@ -1,16 +1,58 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-    <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-    <li><a href='https://webpack.github.io/'>Webpack</a> for building and bundling client-side resources</li>
-    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-    <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-    <li><strong>Server-side prerendering</strong>. For faster initial loading and improved SEO, your Angular app is prerendered on the server. The resulting HTML is then transferred to the browser where a client-side copy of the app takes over.</li>
-    <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.</li>
-    <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, your Angular app will be rebuilt and a new instance injected into the page.</li>
-    <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-5 text-center bg-white">
+          
+           <!-- Main Content - All Partials can go here-->
+           
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center mt-2">
+                        <h5>Login</h5>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="text-primary">Buena Vista</h1>
+                        <!-- <img src="img/paw300.gif"> -->
+                        <p>Bringing Vital Educational Opportunities to Every Student</p>
+                    </div>
+                </div>
+            </div>
+            <!-- #personForm="ngForm"(ngSubmit)="onSubmit(personForm.value)" -->
+            <form class="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center mb-2">
+                            <label for="inputUsername1" class="sr-only">Username</label>
+                            <input type="text" [(ngModel)]="userName" class="form-control" id="inputUsername1" placeholder="Username">
+                        </div>
+                        <div class="col-sm-12 text-center mb-2">
+                            <label for="inputPassword2" [(ngModel)]="password" class="sr-only">Password</label>
+                            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                        </div>
+                        <div class="col-sm-12 text-center mb-2">
+                            <button type="submit" class="btn btn-secondary">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col text-center">
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <div class="col text-center">
+                        <a href="#">Set Up Account</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        <!-- End of Main Content -->
+        </div>  <!-- This /div closes out the main column -->
+        

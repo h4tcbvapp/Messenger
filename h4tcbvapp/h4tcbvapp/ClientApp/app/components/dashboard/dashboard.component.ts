@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http'; 
+import { Observable } from 'rxjs/Observable';
 
 @Component({
-    selector: 'home',
+    selector: 'dashboard',
     templateUrl: './dashboard.component.html'
 })
-export class HomeComponent {
+    // export interface User {
+    //     userName: string;
+    //     password: string;
+    // }
+export class DashboardComponent {
 }
