@@ -9,8 +9,8 @@ export class AuthenticationService {
 
     constructor(private http: Http) {
         // set token if saved in local storage
-        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        this.token = currentUser && currentUser.token;
+        // let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        // this.token = currentUser && currentUser.token;
     }
 
     login(username: string, password: string): Observable<boolean> {
@@ -36,7 +36,7 @@ export class AuthenticationService {
 
     logout(): void {
         // clear token remove user from local storage to log user out
-        this.token = null;
+        // this.token = null;
         localStorage.removeItem('currentUser');
     }
 }
