@@ -1,58 +1,21 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-5 text-center bg-white">
-          
-           <!-- Main Content - All Partials can go here-->
-           
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center mt-2">
-                        <h5>Login</h5>
-                        <hr>
-                    </div>
-                </div>
+<div class="col-md-6 col-md-offset-3">
+        <h2>Login</h2>
+        <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+                <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
             </div>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+            </div>
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">Login</button>
+                <a [routerLink]="['/register']" class="btn btn-link">Register</a>
+            </div>
+        </form>
+    </div>
+    
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h1 class="text-primary">Buena Vista</h1>
-                        <!-- <img src="img/paw300.gif"> -->
-                        <p>Bringing Vital Educational Opportunities to Every Student</p>
-                    </div>
-                </div>
-            </div>
-            <!-- #personForm="ngForm"(ngSubmit)="onSubmit(personForm.value)" -->
-            <form class="form">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center mb-2">
-                            <label for="inputUsername1" class="sr-only">Username</label>
-                            <input type="text" [(ngModel)]="userName" class="form-control" id="inputUsername1" placeholder="Username">
-                        </div>
-                        <div class="col-sm-12 text-center mb-2">
-                            <label for="inputPassword2" [(ngModel)]="password" class="sr-only">Password</label>
-                            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                        </div>
-                        <div class="col-sm-12 text-center mb-2">
-                            <button type="submit" class="btn btn-secondary">Login</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            
-            <div class="container">
-                <div class="row mb-4">
-                    <div class="col text-center">
-                        <a href="#">Forgot Password</a>
-                    </div>
-                    <div class="col text-center">
-                        <a href="#">Set Up Account</a>
-                    </div>
-                </div>
-            </div>
-            
-            
-        <!-- End of Main Content -->
-        </div>  <!-- This /div closes out the main column -->
-        

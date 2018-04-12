@@ -1,31 +1,42 @@
-import { Component } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http'; 
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
+import { AlertService, AuthenticationService } from '../_services/index';
 
 @Component({
-    selector: 'dashboard',
-    templateUrl: './dashboard.component.html'
+    moduleId: module.id,
+    templateUrl: 'login.component.html'
 })
 
+export class LoginComponent implements OnInit {
+    model: any = {};
+    loading = false;
+    returnUrl: string;
 
-// return Object.create(null, {
-//     "all": {
-//         value: function () {
-//             return firebase.auth().currentUser.getToken(true)
-//                 .then(idToken => {
-//                     return $http({
-//                         method: "POST",
-//                         url: `https://h4tcbvapp.azurewebsites.net/home/api/`
-//                     }).then(response => {
-//                         const data = response.data
-//                         this.cache = Object.keys(data).map(key => {
-//                             data[key].id = key
-//                             return data[key]
-//                         })
-//                         return this.cache
-//                     })
-//                 })
-//         }
-//     }})  
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router,
+        private authenticationService: AuthenticationService,
+        private alertService: AlertService) { }
 
-export class DashboardComponent { }
+    ngOnInit() {
+        // reset login status
+        this.authenticationService.logout();
+
+        // get return url from route parameters or default to '/'
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    }
+
+    login() {
+        this.loading = true;
+        this.authenticationService.login(this.model.username, this.model.password)
+            .subscribe(
+                data => {
+                    this.router.navigate([this.returnUrl]);
+                },
+                error => {
+                    this.alertService.error(error);
+                    this.loading = false;
+                });
+    }
+}
