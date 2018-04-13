@@ -28,20 +28,20 @@ export class UserService {
             .map((res:Response) => res.json().console.log(Response))
             .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
             }
-            
+
       // edit existing user details
-      editUser(): Observable<User[]>  {
-         return this.http.get(this.apiUrl + '/api/user')
-         .map((res:Response) => res.json())
-         .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-      }
+      // editUser(): Observable<User[]>  {
+      //    return this.http.put(this.apiUrl + '/api/user')
+      //    .map((res:Response) => res.json())
+      //    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+      // }
 
       //delete existing user (deactivate)
-      deleteUser(): Observable<User[]>  {
-         return this.http.get(this.apiUrl + '/api/user')
-         .map((res:Response) => res.json())
-         .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-      }
+      // deleteUser(): Observable<User[]>  {
+      //    return this.http.delete(this.apiUrl + '/api/user')
+      //    .map((res:Response) => res.json())
+      //    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+      // }
 }
 
 

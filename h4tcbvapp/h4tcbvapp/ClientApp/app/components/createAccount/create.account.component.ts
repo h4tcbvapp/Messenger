@@ -8,8 +8,8 @@ import { UserService } from '../services/userFactory.component';
 export class CreateAccountComponent {
     public account = {'name': 'test', 'password': '123'};
 
-    public createUser = () => UserService.newUser()
-}
+    
+        UserService.newUser()
 
 interface Account {
     name: string;
