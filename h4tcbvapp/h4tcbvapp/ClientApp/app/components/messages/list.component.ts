@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import { MessageService } from '../../service/message';
 import { Message } from '../../model/message';
 
@@ -14,6 +15,6 @@ export class ListMessagesComponent {
     public messages: Message[];
 
     constructor(http: Http, @Inject('BASE_URL') baseUrl: string, private messageService: MessageService) {
-        this.messageService.getMessages(this.student).then((messages) => this.messages = messages);
+        this.messageService.getMessages(this.student).subscribe((messages) => this.messages = messages);
     }
 }
