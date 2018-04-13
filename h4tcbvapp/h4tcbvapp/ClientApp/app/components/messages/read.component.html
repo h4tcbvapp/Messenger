@@ -1,56 +1,43 @@
-<form class="form">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-9 text-center mb-2">
-                <label for="inputUsername1" class="sr-only">Search</label>
-                <input type="text" class="form-control" id="inputUsername1" placeholder="Search">
-            </div>
-
-            <div class="col-3 text-center mb-2">
-                <button type="submit" class="btn btn-secondary">Search</button>
-            </div>
-        </div>
-    </div>
-</form>
 <div class="row">
-    <div class="col">
-        <nav>
-            <div class="nav nav-pills nav-justified" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Classes</a>
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Parent/Teacher</a>
-            </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active text-left" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <hr>
-                <div *ngIf="!messages" class="container">
-                    <p ><em>Loading...</em></p>
-                </div>
-                <div class="container" *ngIf="messages">
-                    <div class="row" *ngFor="let message of messages">
-                        <div class="row">
-                            <div class="col-8">
-                                <h5>{{message.from}}</h5>
-                            </div>
-                            <div class="col-3">
-                                <h6>{{message.date}}</h6>
-                            </div>
-                            <div class="col-1 text-right">
-                                <a href="#"><i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <p class="truncate mb-0">{{message.message}}
-                                    
-
-                                </p>
-                            </div>
-                        </div>
+    <hr>
+    <div *ngIf="!messages" class="container">
+        <p ><em>Loading...</em></p>
+    </div>
+    <div class="container" *ngIf="messages">
+        <div class="row" *ngFor="let message of messages">
+            <div class="container pt-3 pb-1">
+                <div class="row">
+                    <div class="col-12 text-left">
+                        <h5>To: {{message.to}}</h5>
+                    </div>
+                    <div class="col-12 text-right">
+                        <h6>{{message.date}}</h6>
                     </div>
                 </div>
-                <hr>
+                <div class="row">
+                    <div class="col text-left  mb-4">
+                        <p class="mb-0">{{message.text}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <form class="form">
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-12 text-center mb-2">
+                    <label for="inputUsername1" class="sr-only">Message</label>
+                    <textarea rows="10" type="text" class="form-control" id="inputUsername1" placeholder="Message"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mb-2">
+                <button type="submit" class="btn btn-primary">Reply</button>
+            </div>
+        </div>
+    </div>
+    <hr>
 </div>

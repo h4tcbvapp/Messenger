@@ -12592,23 +12592,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/j/.nuget/packages/": {},
+    "/Users/jonathan.hughes/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
+      "projectUniqueName": "/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
       "projectName": "BVAppDAL",
-      "projectPath": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
-      "packagesPath": "/Users/j/.nuget/packages/",
-      "outputPath": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/",
+      "projectPath": "/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
+      "packagesPath": "/Users/jonathan.hughes/.nuget/packages/",
+      "outputPath": "/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/j/.nuget/NuGet/NuGet.Config"
+        "/Users/jonathan.hughes/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -12630,26 +12630,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.0",
+            "autoReferenced": true
+          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "[2.0.6, )"
+            "version": "2.0.6"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "[2.0.2, )"
+            "version": "2.0.2"
           },
           "Microsoft.EntityFrameworkCore.SqlServer.Design": {
             "target": "Package",
-            "version": "[1.1.5, )"
+            "version": "1.1.5"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "[2.0.2, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "2.0.2"
           }
         },
         "imports": [

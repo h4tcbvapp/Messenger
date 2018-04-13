@@ -29,15 +29,17 @@
                 <div class="container" *ngIf="messages">
                     <div class="row" *ngFor="let message of messages">
                         <div class="row">
-                            <div class="col-8">
-                                <h5>{{message.from}}</h5>
-                            </div>
-                            <div class="col-3">
-                                <h6>{{message.date}}</h6>
-                            </div>
-                            <div class="col-1 text-right">
-                                <a href="#"><i class="fas fa-angle-right"></i></a>
-                            </div>
+                            <a [routerLink]="['/read-messages']">
+                                <div class="col-8">
+                                    <h5>{{message.from}}</h5>
+                                </div>
+                                <div class="col-3">
+                                    <h6>{{message.date}}</h6>
+                                </div>
+                                <div class="col-1 text-right">
+                                    <a href="#"><i class="fas fa-angle-right"></i></a>
+                                </div>
+                            </a>
                         </div>
                         <div class="row">
                             <div class="col">
