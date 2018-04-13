@@ -33,8 +33,14 @@ namespace BVAppDAL.DAL
             return json;
         }
 
-        public void UpdateParty(int partyId, int partyTypeId, string firstName, string middleName, string lastName, string title,
+        public void UpdateParty(int partyTypeId, string firstName, string middleName, string lastName, string title,
             string emailAddress, string isActive)
+        {
+            UpdateParty(partyTypeId, firstName, middleName, lastName, title, emailAddress, isActive, 0);
+        }
+
+        public void UpdateParty(int partyTypeId, string firstName, string middleName, string lastName, string title,
+            string emailAddress, string isActive, int partyId)
         {
             try
             {
@@ -57,6 +63,7 @@ namespace BVAppDAL.DAL
                 else
                 {
                     var party = new Party();
+                    party.PartyTypeId = partyTypeId;
                     party.FirstName = firstName;
                     party.MiddleName = middleName;
                     party.LastName = lastName;
