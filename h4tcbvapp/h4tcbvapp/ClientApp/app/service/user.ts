@@ -19,14 +19,12 @@ export class UserService {
       }
 
       
-      public async postUser(userName: string, password: string): Promise<Message[]> {
+      public async createUser(userName: string, password: string): Promise<User[]> {
           const body = JSON.stringify(User);
           const header = new Headers();
           header.append("Content-Type","application/json");
-          return this.User;
-          const response = await this.http.get(this.baseUrl + 'api/messages').toPromise();
-          return this.http.post(this.apiUrl + '/api/user', body , { headers: header })
-                return response.json() as Message[];
+          const response = await this.http.post(this.apiUrl + '/api/user', body , { headers: header }).toPromise();
+                return response.json() as User[];
             }
 
       // edit existing user details
