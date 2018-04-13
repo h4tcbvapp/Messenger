@@ -1,22 +1,27 @@
-import { Component, Inject } from '@angular/core';
-import { Http } from '@angular/http';
-import { AuthenticationService } from '../../service/authentication';
-import { User } from '../../model/user';
-// import { TeacherComponent } 
-// import { StudentComponent } 
+// import { Component, Inject } from '@angular/core';
+// import { Http } from '@angular/http';
+// import { AuthenticationService } from '../../service/authentication';
+// import { ClassService } from '../../service/classService';
+// import { User } from '../../model/user';
+// import { Class } from '../../model/class';
 
-@Component({
-    selector: 'class',
-    templateUrl: './class.component.html'
-})
-export class ClassComponent {
+// // import { TeacherComponent } 
+// // import { StudentComponent } 
 
-    constructor(private service: ClassService) {}
+// @Component({
+//     selector: 'class',
+//     templateUrl: './class.component.html'
+// })
+// export class ClassComponent {
 
-    public user: User = {"username": "", "password": "", token: ""};
+//     constructor(     service: ClassService) {
+        
+//     }
 
-    public addClass = () => {
-      this.service.addClassToEducator(this.user)
-          .subscribe( data => console.log(data));
-    }
-}
+//     public class: Class = {"name": "", "grade": "", "teacher": "", "student": ""};
+
+//     public addClass = () => {
+//       this.service.addClassForEducator(this.class)
+//           .subscribe( data => console.log(data));
+//     }
+// }

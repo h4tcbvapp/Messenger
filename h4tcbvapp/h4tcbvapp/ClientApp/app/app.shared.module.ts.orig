@@ -22,8 +22,12 @@ import { AuthenticationService } from './service/authentication';
         CreateAccountComponent,
         ListMessagesComponent,
         LoginComponent,
-        //ClassComponent,
+<<<<<<< HEAD
+        ClassComponent
         ReadMessagesComponent
+=======
+        // ClassComponent
+>>>>>>> ac1385ffab4c67b3d0727a1b7224d3e386e1d09e
     ],
     providers: [
         { provide: MessageService, useClass: MessageService},
