@@ -34,6 +34,11 @@
   <ItemGroup>
     <ProjectReference Include="..\BVAppDAL\BVAppDAL.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\NotificationController_BASE_92212.cs" />
+    <Compile Remove="Controllers\NotificationController_LOCAL_92212.cs" />
+    <Compile Remove="Controllers\NotificationController_REMOTE_92212.cs" />
+  </ItemGroup>
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

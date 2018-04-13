@@ -1,9 +1,5 @@
 ﻿<Properties StartupConfiguration="{C74AABEA-3AFB-43C3-A9E5-8C768C8B8710}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp Status">
-    <Files>
-      <File FileName="h4tcbvapp Status" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
