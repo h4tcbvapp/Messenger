@@ -12,7 +12,7 @@ import { ListMessagesComponent } from './components/messages/list.component';
 import { LoginComponent } from './components/login/login.component';
 import { MessageService } from './service/message';
 import { AuthenticationService } from './service/authentication';
-import { ClassComponent } from './components/class/class.component';
+// import { ClassComponent } from './components/class/class.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -21,7 +21,7 @@ import { ClassComponent } from './components/class/class.component';
         CreateAccountComponent,
         ListMessagesComponent,
         LoginComponent,
-        ClassComponent
+        // ClassComponent
     ],
     providers: [
         { provide: MessageService, useClass: MessageService},
@@ -36,7 +36,7 @@ import { ClassComponent } from './components/class/class.component';
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'create-account', component: CreateAccountComponent },
-            { path: 'class', component: ClassComponent },
+            // { path: 'class', component: ClassComponent },
             { path: 'list-messages', component: ListMessagesComponent },
             { path: 'login', component: LoginComponent },
             { path: '**', redirectTo: 'home' }
