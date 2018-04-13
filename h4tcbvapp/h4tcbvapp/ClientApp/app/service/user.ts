@@ -14,7 +14,7 @@ export class UserService {
 
       // list users (Admin functionality)
       getUser(): Observable<User[]>  {
-         return this.http.get(this.apiUrl + '/api/user')
+         return this.http.get(this.apiUrl + '/api/Authentication')
          .map((res:Response) => res.json())
          .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
       }
