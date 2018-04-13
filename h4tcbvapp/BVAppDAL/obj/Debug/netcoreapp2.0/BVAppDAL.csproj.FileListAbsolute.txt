@@ -9,3 +9,14 @@
 /Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfo.cs
 /Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.dll
 /Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.pdb
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.deps.json
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.runtimeconfig.json
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.runtimeconfig.dev.json
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.dll
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.pdb
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.csprojResolveAssemblyReference.cache
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.csproj.CoreCompileInputs.cache
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfoInputs.cache
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfo.cs
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.dll
+/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.pdb

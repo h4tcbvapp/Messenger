@@ -12592,30 +12592,29 @@
     ]
   },
   "packageFolders": {
-    "/Users/ylivshitz/.nuget/packages/": {},
+    "/Users/j/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
+      "projectUniqueName": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
       "projectName": "BVAppDAL",
-      "projectPath": "/Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
-      "packagesPath": "/Users/ylivshitz/.nuget/packages/",
-      "outputPath": "/Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/obj",
+      "projectPath": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
+      "packagesPath": "/Users/j/.nuget/packages/",
+      "outputPath": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/ylivshitz/.config/NuGet/NuGet.Config"
+        "/Users/j/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "https://mobile-core.pkgs.visualstudio.com/_packaging/DMC/nuget/v2": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
@@ -12631,27 +12630,26 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.6"
+            "version": "[2.0.6, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer.Design": {
             "target": "Package",
-            "version": "1.1.5"
+            "version": "[1.1.5, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           }
         },
         "imports": [
