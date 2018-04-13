@@ -8,10 +8,12 @@ import { UserService } from '../services/userFactory.component';
 export class CreateAccountComponent {
     public account = {'name': 'test', 'password': '123'};
 
-    
-        UserService.newUser()
+    grabFormValuesForPost(userName: string , password: string) {
+      this.service.newUser({userName: userName, password: password})
+        .subscribe( data => console.log(data));
+    }
 
-interface Account {
-    name: string;
+public interface Account {
+    userName: string;
     password: string;
 }
