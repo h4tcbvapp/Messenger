@@ -1,22 +1,19 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
 import { UserService } from '../../service/user';
+//import { UserService } from '../../services/user';
+//import { User } from '../../model/user';
 @Component({
     selector: 'createaccount',
     templateUrl: './create.component.html'
 })
 export class CreateAccountComponent {
-    public account = {'name': 'test', 'password': '123'};
+    //constructor(private service: UserService) {}
 
-//     grabFormValuesForPost(userName: string , password: string) {
-//       this.service.newUser({userName: userName, password: password})
-//         .subscribe( data => console.log(data));
-//     }
+    //public user: User = {};
 
-// public interface Account {
-//     userName: string;
-//     password: string;
-// }
-
-
+    createUser() {
+      //this.service.createUser(user)
+      //    .subscribe( data => console.log(data));
+    }
 }

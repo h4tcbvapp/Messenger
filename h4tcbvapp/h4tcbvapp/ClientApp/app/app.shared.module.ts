@@ -11,6 +11,7 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { CreateAccountComponent } from './components/account/create.component';
 import { ListMessagesComponent } from './components/messages/list.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { ListMessagesComponent } from './components/messages/list.component';
         FetchDataComponent,
         HomeComponent,
         CreateAccountComponent,
-        ListMessagesComponent
+        ListMessagesComponent,
+        LoginComponent
     ],
     imports: [
         CommonModule,
@@ -33,6 +35,7 @@ import { ListMessagesComponent } from './components/messages/list.component';
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'create-account', component: CreateAccountComponent },
             { path: 'list-messages', component: ListMessagesComponent },
+            { path: 'login', component: LoginComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

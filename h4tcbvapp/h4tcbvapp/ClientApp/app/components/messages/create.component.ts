@@ -7,9 +7,14 @@ import { Message } from '../../model/message';
     templateUrl: './create.component.html'
 })
 export class CreateMessagesComponent {
-    public message = {};
+    public message = {
+            "from": "someone",
+            "to": "me",
+            "message": "hello1",
+            "date" : new Date()
+    };
 
     public createMessage = () => {
-        console.log(message);
+        //console.log(message);
     }
 }
