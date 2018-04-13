@@ -22,7 +22,6 @@
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
     <Content Remove="ClientApp\**" />
-    <Content Remove="Views\NotificationTest\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,7 +29,6 @@
     <Folder Include="ClientApp\app\components\account\" />
     <Folder Include="ClientApp\app\components\messages\" />
 =======
-    <Compile Remove="Controllers\NotificationTestController.cs" />
 >>>>>>> Stashed changes
   </ItemGroup>
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
