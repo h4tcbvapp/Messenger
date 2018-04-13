@@ -5,6 +5,7 @@ using SendGrid;
 using SendGrid.Helpers.Mail;
 using Microsoft.Extensions.Configuration;
 using h4tcbvapp.Classes;
+using h4tcbvapp.Services;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,21 +16,22 @@ namespace h4tcbvapp.Controllers
     public class GradeController : Controller
     {
         private readonly IConfiguration _configuration;
+        private GradeService _gradeService;
+
 
         public GradeController(IConfiguration configuration)
         {
             _configuration = configuration;
+            _gradeService = new GradeService();
         }
 
         [HttpGet]
         public ActionResult getGrades()
         {
-            List<GradeModel> grades = new List<GradeModel>();
-            grades.Add(new GradeModel { Id = 1, GradeName = "Kintergarten" });
-            grades.Add(new GradeModel { Id = 2, GradeName = "Grade 1" });
+            List<GradeModel> models = _gradeService.getGrades();
 
             var result = new Dictionary<string, object>();
-            result.Add("Grades", grades);
+            result.Add("Grades", models);
 
             return Json(result);
         }

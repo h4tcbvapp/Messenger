@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace BVAppDAL.Models
 {
@@ -31,12 +33,21 @@ namespace BVAppDAL.Models
 : base()
         { }
 
+        private static IConfiguration Configuration { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer(@"Server=bvappsvr.database.windows.net;Database=bvapp;Persist Security Info=True;User ID=bvappadmin;Password=passbv!123;");
+                #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                //optionsBuilder.UseSqlServer(@"Server=bvappsvr.database.windows.net;Database=bvapp;Persist Security Info=True;User ID=bvappadmin;Password=passbv!123;");
+
+                var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+
+                Configuration = builder.Build();
+                optionsBuilder.UseSqlServer(Configuration["ConnectionStrings:bvConnection"]);
             }
         }
 
