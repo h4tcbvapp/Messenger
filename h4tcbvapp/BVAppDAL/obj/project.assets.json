@@ -12592,39 +12592,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "/Users/j/.nuget/packages/": {},
-=======
-    "/Users/jonathan.hughes/.nuget/packages/": {},
->>>>>>> 2eb2bd0104f17a5971d248df83f46e4b010cea47
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
       "projectName": "BVAppDAL",
       "projectPath": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
       "packagesPath": "/Users/j/.nuget/packages/",
       "outputPath": "/Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/",
-=======
-      "projectUniqueName": "/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
-      "projectName": "BVAppDAL",
-      "projectPath": "/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
-      "packagesPath": "/Users/jonathan.hughes/.nuget/packages/",
-      "outputPath": "/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/obj",
->>>>>>> 2eb2bd0104f17a5971d248df83f46e4b010cea47
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "/Users/j/.nuget/NuGet/NuGet.Config"
-=======
-        "/Users/jonathan.hughes/.config/NuGet/NuGet.Config"
->>>>>>> 2eb2bd0104f17a5971d248df83f46e4b010cea47
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
