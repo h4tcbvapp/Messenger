@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
 import { AuthenticationService } from '../../service/authentication';
+import { ClassService } from '../../service/classService';
 import { User } from '../../model/user';
 import { Class } from '../../model/class';
 
@@ -20,7 +21,7 @@ export class ClassComponent {
     public class: Class = {"name": "", "grade": "", "teacher": "", "student": ""};
 
     public addClass = () => {
-    //   this.service.addClassToEducator(this.user)
-    //       .subscribe( data => console.log(data));
+      this.service.addClassToEducator(this.user)
+          .subscribe( data => console.log(data));
     }
 }
