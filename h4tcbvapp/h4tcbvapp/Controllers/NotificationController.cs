@@ -4,14 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using Microsoft.Extensions.Configuration;
-using h4tcbvnotification.Classes;
+using h4tcbvapp.Classes;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace h4tcbvapp.Controllers
 {
-    public class NotificationController : Controller
-    {
     [Route("api/[controller]")]
     public class NotificationController : Controller
     {

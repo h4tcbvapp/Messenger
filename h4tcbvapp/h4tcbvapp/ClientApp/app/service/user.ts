@@ -28,11 +28,13 @@ export class UserService {
             }
 
       // edit existing user details
-      // editUser(): Observable<User[]>  {
-      //    return this.http.put(this.apiUrl + '/api/user')
-      //    .map((res:Response) => res.json())
-      //    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-      // }
+      public async editUser(userName: string, password: string): Promise<User[]>  {
+            const body = JSON.stringify(User);
+            const header = new Headers();
+            header.append("Content-Type","application/json");
+            const response = await this.http.post(this.apiUrl + '/api/user', body , { headers: header }).toPromise();
+                  return response.json() as User[];
+      }
 
       //delete existing user (deactivate)
       // deleteUser(): Observable<User[]>  {
