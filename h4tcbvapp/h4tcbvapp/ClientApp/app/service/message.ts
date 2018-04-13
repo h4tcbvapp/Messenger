@@ -24,8 +24,8 @@ export class MessageService {
 
     public async getMessages(student: string): Promise<Message[]> {
         return this.messages;
-        //const response = await this.http.get(this.baseUrl + 'api/messages').toPromise();
-        //return response.json() as Message[];
+        // const response = await this.http.get(this.baseUrl + 'api/messages').toPromise();
+        // return response.json() as Message[];
     }
 
     public async createMessage(message: Message) {
