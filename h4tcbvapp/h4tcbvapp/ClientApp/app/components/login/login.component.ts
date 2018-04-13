@@ -11,10 +11,21 @@ export class LoginComponent {
 
     constructor(private service: AuthenticationService) {}
 
-    public user: User = {"username": "", "password": "", token: ""};
+    public loggedIn: boolean = false;
+
+    public displayLoginMessage: boolean = false;
+
+    public user: User = new User();
 
     public login = () => {
-      this.service.loginWithToken(this.user)
-          .subscribe( data => console.log(data));
+      try {
+          this.service.loginWithToken(this.user).subscribe( loggedIn => {
+                this.loggedIn = loggedIn
+          });
+      }
+      finally {
+          this.displayLoginMessage = true;
+      }
+
     }
 }

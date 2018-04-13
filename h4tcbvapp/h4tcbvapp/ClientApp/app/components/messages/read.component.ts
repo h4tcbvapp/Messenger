@@ -7,13 +7,16 @@ import { Message } from '../../model/message';
     selector: 'message-read',
     templateUrl: './read.component.html'
 })
-export class CreateMessagesComponent {
-    public message = {
+export class ReadMessagesComponent {
+
+    public message: Message = {id: "", from: "", to: "", text: "", date: new Date()} as Message;
+    
+    public messages = [{
         "from": "someone",
         "to": "me",
         "message": "hello1",
         "date" : new Date()
-    };
+    }];
 
     public createMessage = () => {
         console.log(this.message);

@@ -9,6 +9,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateAccountComponent } from './components/account/create.component';
 import { ListMessagesComponent } from './components/messages/list.component';
+import { ReadMessagesComponent } from './components/messages/read.component';
 import { LoginComponent } from './components/login/login.component';
 import { MessageService } from './service/message';
 import { AuthenticationService } from './service/authentication';
@@ -22,6 +23,7 @@ import { ClassComponent } from './components/class/class.component';
         ListMessagesComponent,
         LoginComponent,
         ClassComponent
+        ReadMessagesComponent
     ],
     providers: [
         { provide: MessageService, useClass: MessageService},
@@ -38,6 +40,7 @@ import { ClassComponent } from './components/class/class.component';
             { path: 'create-account', component: CreateAccountComponent },
             { path: 'class', component: ClassComponent },
             { path: 'list-messages', component: ListMessagesComponent },
+            { path: 'read-messages', component: ReadMessagesComponent },
             { path: 'login', component: LoginComponent },
             { path: '**', redirectTo: 'home' }
         ])
