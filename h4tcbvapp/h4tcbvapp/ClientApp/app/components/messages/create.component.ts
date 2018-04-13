@@ -8,6 +8,7 @@ import { Message } from '../../model/message';
 })
 export class CreateMessagesComponent {
     public message = {
+            "id": null,
             "from": "someone",
             "to": "me",
             "message": "hello1",

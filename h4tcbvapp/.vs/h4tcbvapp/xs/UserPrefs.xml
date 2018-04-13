@@ -1,38 +1,14 @@
-<<<<<<< Updated upstream
 ﻿<Properties StartupConfiguration="{C74AABEA-3AFB-43C3-A9E5-8C768C8B8710}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp/ClientApp/app/components/navmenu/navmenu.component.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp/ClientApp/app/components/messages/read.component.html">
     <Files>
-      <File FileName="h4tcbvapp/ClientApp/app/components/messages/list.component.ts" Line="19" Column="2" />
-      <File FileName="h4tcbvapp/ClientApp/app/service/message.ts" Line="17" Column="24" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/account/create.component.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/messages/list.component.html" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/service/user.ts" Line="19" Column="8" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/messages/read.component.html" Line="17" Column="14" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/messages/read.component.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/model/message.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/messages/create.component.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/app/app.component.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/home/home.component.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/home/home.component.html" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/app/app.component.html" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/account/create.component.html" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/login/login.component.html" Line="19" Column="19" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/login/login.component.ts" Line="18" Column="40" />
-      <File FileName="h4tcbvapp/ClientApp/app/app.shared.module.ts" Line="38" Column="21" />
-      <File FileName="h4tcbvapp/ClientApp/app/app.browser.module.ts" Line="19" Column="60" />
-      <File FileName="h4tcbvapp/ClientApp/app/app.server.module.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/model/user.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/Controllers/NotificationController_BASE_92212.cs" Line="81" Column="2" />
-      <File FileName="h4tcbvapp/ClientApp/app/service/authentication.ts" Line="45" Column="8" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/navmenu/navmenu.component.ts" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/navmenu/navmenu.component.html" Line="40" Column="47" />
-=======
-﻿<Properties StartupConfiguration="{C74AABEA-3AFB-43C3-A9E5-8C768C8B8710}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp/Startup.cs">
-    <Files>
-      <File FileName="h4tcbvapp/Startup.cs" Line="46" Column="1" />
-      <File FileName="h4tcbvapp/Controllers/NotificationController.cs" Line="26" Column="39" />
->>>>>>> Stashed changes
+      <File FileName="h4tcbvapp/ClientApp/app/service/authentication.ts" Line="27" Column="41" />
+      <File FileName="h4tcbvapp/ClientApp/app/service/message.ts" Line="13" Column="41" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/fetchdata/fetchdata.component.ts" Line="1" Column="19" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/messages/list.component.ts" Line="17" Column="93" />
+      <File FileName="h4tcbvapp/ClientApp/app/model/message.ts" Line="5" Column="9" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/messages/create.component.ts" Line="11" Column="24" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/messages/list.component.html" Line="20" Column="28" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/messages/read.component.html" Line="15" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

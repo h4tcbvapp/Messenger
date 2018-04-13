@@ -1,39 +1,25 @@
 ﻿import { Injectable, Inject } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import { Message } from '../model/message';
 
 @Injectable()
 export class MessageService {
 
-    public messages: Message[] = [
-        {
-            "from": "someone",
-            "to": "me",
-            "message": "hello1",
-            "date" : new Date()
-        },
-        {
-            "from": "someone2",
-            "to": "me",
-            "message": "hello2",
-            "date" : new Date()
-        }
-    ];
+    constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private headers: Headers) {}
 
-    constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string) {}
-
-    public async getMessages(student: string): Promise<Message[]> {
-        return Promise.resolve(this.messages);
-        // const response = await this.http.get(this.baseUrl + 'api/messages').toPromise();
-        // return response.json() as Message[];
+    public getMessages(student: string): Observable<Message[]> {
+        return this.http.get(this.baseUrl + 'api/Messages/GetMessages', {headers: this.headers}).map((response: Response) => {
+            console.log(response.json());
+            return response.json() as Message[];
+        });
     }
 
-    public async createMessage(message: Message): Promise<Message> {
-        this.messages.push(message);
-        return Promise.resolve(message);
-        //const response = await this.http.post(this.baseUrl + 'api/messages', message).toPromise();
-        //message.id = response.json() as string;
-        //return message;
+    public createMessage(message: Message): Observable<Message> {
+        return this.http.post(this.baseUrl + 'api/Message/Post', message).map((response: Response) => {
+            message.id = response.json().id;
+            return message;
+        });
     }
 
 }
