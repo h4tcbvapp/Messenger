@@ -12,6 +12,9 @@ import { CounterComponent } from './components/counter/counter.component';
 import { CreateAccountComponent } from './components/account/create.component';
 import { ListMessagesComponent } from './components/messages/list.component';
 import { LoginComponent } from './components/login/login.component';
+import { MessageService } from './service/message';
+import { AuthenticationService } from './service/authentication';
+import { Headers } from '\@angular/http';
 
 @NgModule({
     declarations: [
@@ -23,6 +26,10 @@ import { LoginComponent } from './components/login/login.component';
         CreateAccountComponent,
         ListMessagesComponent,
         LoginComponent
+    ],
+    providers: [
+        { provide: MessageService, useClass: MessageService},
+        { provide: AuthenticationService, useClass: AuthenticationService}
     ],
     imports: [
         CommonModule,

@@ -24,13 +24,14 @@ export class AuthenticationService {
       public loginWithToken(user: User): Observable<boolean> {
             const header = new Headers();
             header.append("Content-Type","application/json");
+            console.log("Stringified user: " + JSON.stringify(user));
             return this.http.post('/api/Token', JSON.stringify(user), { headers: header })
                 .map((response: Response) => {
                     // login successful if there's a jwt token in the response
                     let token = response.json() && response.json().token;
                     if (token) {
                         // set token property
-                        token = token;
+                        user.token = token;
     
                         // store username and jwt token in local storage to keep user logged in between page refreshes
                         localStorage.setItem('currentUser', JSON.stringify(user));

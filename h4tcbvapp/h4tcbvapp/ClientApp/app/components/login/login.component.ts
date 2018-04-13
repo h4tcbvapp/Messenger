@@ -11,7 +11,7 @@ export class LoginComponent {
 
     constructor(private service: AuthenticationService) {}
 
-    public user: User = {userName: "", password: ""} as User;
+    public user: User = {"username": "", "password": "", token: ""};
 
     public login = () => {
       this.service.loginWithToken(this.user)
