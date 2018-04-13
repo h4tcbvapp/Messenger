@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
-
+import { UserService } from '../services/userFactory.component';
 @Component({
     selector: 'createaccount',
     templateUrl: './create.account.component.html'
@@ -8,7 +8,7 @@ import { Http } from '@angular/http';
 export class CreateAccountComponent {
     public account = {'name': 'test', 'password': '123'};
 
-    public createUser = () => console.log(this.account);
+    public createUser = () => UserService.newUser()
 }
 
 interface Account {
