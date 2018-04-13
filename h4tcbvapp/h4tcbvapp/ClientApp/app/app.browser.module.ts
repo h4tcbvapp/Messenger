@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { AppModuleShared } from './app.shared.module';
 import { AppComponent } from './components/app/app.component';
+import { MessageService } from './service/message';
 
 @NgModule({
     bootstrap: [ AppComponent ],
     imports: [
+        HttpModule,
         BrowserModule,
         AppModuleShared
     ],
     providers: [
-        { provide: 'BASE_URL', useFactory: getBaseUrl }
+        { provide: 'BASE_URL', useFactory: getBaseUrl },
+        { provide: MessageService, useClass: MessageService}
     ]
 })
 export class AppModule {
