@@ -18,7 +18,7 @@ export class UserService {
          .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
       }
       //create new user
-      newUser(): Observable<User[]>  {
+      newUser(): Observable<User>  {
             // setting post options
             const body = JSON.stringify(User);
             const header = new Headers();
