@@ -14,6 +14,7 @@ import { MessageService } from './service/message';
     ],
     providers: [
         { provide: 'BASE_URL', useFactory: getBaseUrl },
+        // { provide: 'BASE_U', useFactory: getBaseUrl },  //JWT HEADERS
         { provide: MessageService, useClass: MessageService}
     ]
 })
