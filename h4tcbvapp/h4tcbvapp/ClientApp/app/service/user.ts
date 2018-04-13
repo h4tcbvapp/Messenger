@@ -23,7 +23,7 @@ export class UserService {
           const body = JSON.stringify(User);
           const header = new Headers();
           header.append("Content-Type","application/json");
-          return this.messages;
+          return this.User;
           const response = await this.http.get(this.baseUrl + 'api/messages').toPromise();
           return this.http.post(this.apiUrl + '/api/user', body , { headers: header })
                 return response.json() as Message[];
