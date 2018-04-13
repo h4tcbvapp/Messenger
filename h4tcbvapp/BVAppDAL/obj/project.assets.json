@@ -12602,13 +12602,13 @@
       "projectName": "BVAppDAL",
       "projectPath": "/Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/BVAppDAL.csproj",
       "packagesPath": "/Users/eoj7493/.nuget/packages/",
-      "outputPath": "/Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/obj/",
+      "outputPath": "/Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/eoj7493/.nuget/NuGet/NuGet.Config"
+        "/Users/eoj7493/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -12630,26 +12630,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.0",
+            "autoReferenced": true
+          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "[2.0.6, )"
+            "version": "2.0.6"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "[2.0.2, )"
+            "version": "2.0.2"
           },
           "Microsoft.EntityFrameworkCore.SqlServer.Design": {
             "target": "Package",
-            "version": "[1.1.5, )"
+            "version": "1.1.5"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "[2.0.2, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "2.0.2"
           }
         },
         "imports": [

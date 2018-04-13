@@ -1,8 +1,14 @@
 ﻿<Properties StartupConfiguration="{C74AABEA-3AFB-43C3-A9E5-8C768C8B8710}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp Status">
+    <Files>
+      <File FileName="h4tcbvapp Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/h4tcbvapp/Controllers/NotificationController.cs" relfile="h4tcbvapp/Controllers/NotificationController.cs" line="48" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.h4tcbvapp PreferredExecutionTarget="MonoDevelop.Default" />
