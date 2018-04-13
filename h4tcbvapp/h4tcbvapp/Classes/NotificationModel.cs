@@ -29,4 +29,38 @@ namespace h4tcbvapp.Classes
             Recipients = new Dictionary<string, string>();
         }
     }
+
+    public class NotificationSender
+    {
+        public string ApiKey
+        {
+            get;
+            set;
+        }
+
+        public string FromAddress
+        {
+            get;
+            set;
+        }
+
+        public string FromName
+        {
+            get;
+            set;
+        }
+
+        public string MessageFormat
+        {
+            get;
+            set;
+        }
+
+        public bool DisplayRecipients
+        {
+            get;
+            set;
+        }
+}
+
 }

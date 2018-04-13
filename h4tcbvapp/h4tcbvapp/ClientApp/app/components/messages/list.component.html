@@ -3,7 +3,7 @@
         <div class="row mb-4">
             <div class="col-9 text-center mb-2">
                 <label for="inputUsername1" class="sr-only">Search</label>
-                <input type="text" class="form-control" id="inputUsername1" placeholder="Search">
+                <input type="text" class="form-control" #student id="inputUsername1" placeholder="Search">
             </div>
 
             <div class="col-3 text-center mb-2">
@@ -29,19 +29,21 @@
                 <div class="container" *ngIf="messages">
                     <div class="row" *ngFor="let message of messages">
                         <div class="row">
-                            <div class="col-8">
-                                <h5>{{message.from}}</h5>
-                            </div>
-                            <div class="col-3">
-                                <h6>{{message.date}}</h6>
-                            </div>
-                            <div class="col-1 text-right">
-                                <a href="#"><i class="fas fa-angle-right"></i></a>
-                            </div>
+                            <a [routerLink]="['/read-messages']">
+                                <div class="col-8">
+                                    <h5>{{message.from}}</h5>
+                                </div>
+                                <div class="col-3">
+                                    <h6>{{message.date}}</h6>
+                                </div>
+                                <div class="col-1 text-right">
+                                    <a href="#"><i class="fas fa-angle-right"></i></a>
+                                </div>
+                            </a>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p class="truncate mb-0">{{message.message}}</p>
+                                <p class="truncate mb-0">{{message.text}}</p>
                             </div>
                         </div>
                     </div>

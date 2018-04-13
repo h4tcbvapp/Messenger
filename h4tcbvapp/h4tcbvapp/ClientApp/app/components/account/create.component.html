@@ -1,25 +1,36 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 text-center mt-2">
-            <h5>New Account Setup</h5>
-            <hr>
-        </div>
-    </div>
-</div>
-<form class="form">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center mb-2">
-                <label for="inputUsername1" class="sr-only">Username &#42;</label>
-                <input type="text" class="form-control" id="inputUsername1" #account.name placeholder="Username &#42;">
-            </div>
-            <div class="col-sm-12 text-center mb-2">
-                <label for="inputPassword2" class="sr-only">Password &#42;</label>
-                <input type="password" class="form-control" id="inputPassword2" #account.password placeholder="Password &#42;">
-            </div>
-            <div class="col-sm-12 text-center mb-2">
-                <button type="button" class="btn btn-secondary" (click)="createUser(account.name.value, account.password.value)">Save</button>
-            </div>
-        </div>
-    </div>
-</form>
+                <!-- New Account Partial -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h1 class="text-primary">Buena Vista</h1>
+                            <img src="../../../../wwwroot/content/img/paw300.gif" width="150px" height="150px">
+                            <p class="mt-1">Bringing Vital Educational Opportunities to Every Student</p>
+                            <p class="text-primary text-left">&#42; required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="form">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center mb-3">
+                                <label for="inputUsername1" class="sr-only">Username &#42;</label>
+                                <input type="text" class="form-control" id="inputUsername1" placeholder="Username &#42;">
+                            </div>
+                            <div class="col-sm-12 text-center mb-3">
+                                <label for="inputPassword2" class="sr-only">Password &#42;</label>
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password &#42;">
+                            </div>
+                            <div class="col-sm-12 text-center mb-3">
+                                <label for="inputPassword3" class="sr-only">Password &#42;</label>
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Confirm Password &#42;">
+                            </div>
+                            <div class="col-sm-12 text-center mb-4">
+                                <button type="button" class="btn btn-primary" (click)="createUser()">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- End of New Account Setup Partial -->
