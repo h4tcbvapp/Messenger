@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace h4tcbvapp.Controllers
@@ -6,7 +7,7 @@ namespace h4tcbvapp.Controllers
     [Route("api/[controller]")]
     public class MessageController : Controller
     {
-        [HttpPost("[action]")]
+        [HttpPost("[action]"), Authorize]
         public MockMessageEntity Post(Message message)
         {
             return new MockMessageEntity { ID = 42 };

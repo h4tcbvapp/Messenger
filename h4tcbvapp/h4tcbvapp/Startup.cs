@@ -46,7 +46,7 @@ namespace h4tcbvapp
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Buena Vista API", Version = "v2" });
+                c.SwaggerDoc("v1", new Info { Title = "Buena Vista API", Version = "v1" });
             });
 
             /* Unocmment to allow CORS.  Don't forget to also uncomment the line in Configure() menthod.
