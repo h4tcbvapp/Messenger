@@ -23,6 +23,7 @@ export class UserService {
             const body = JSON.stringify(User);
             const header = new Headers();
             header.append("Content-Type","application/json");
+            
             // execute post
             return this.http.post(this.apiUrl + '/api/user', body , { headers: header })
             .map((res:Response) => res.json().console.log(Response))

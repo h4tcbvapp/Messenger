@@ -15,4 +15,3 @@ import { AlertService, AuthenticationService } from '../_services/index';
    styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {}
