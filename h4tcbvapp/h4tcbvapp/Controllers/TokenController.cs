@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using BVAppDAL.DAL;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -50,14 +51,14 @@ namespace JWT.Controllers
 
         private UserModel Authenticate(LoginModel login)
         {
-            //TODO: Implement Real Authentication
-            UserModel user = null;
+            var accountDal = new AccountDAL();
 
-            if (login.Username == "mario" && login.Password == "secret")
+            if(accountDal.CheckLogin(login.Username, login.Password))
             {
-                user = new UserModel { Name = "Mario Rossi", Email = "mario.rossi@domain.com" };
+                return new UserModel { Name = "Mario Rossi", Email = "mario.rossi@domain.com" };
             }
-            return user;
+            return null;
+
         }
 
         public class LoginModel

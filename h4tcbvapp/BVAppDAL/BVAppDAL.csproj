@@ -26,4 +26,7 @@
     <Content Remove="Views\Home\Index.cshtml" />
     <Content Remove="wwwroot\css\site.css" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
 </Project>
