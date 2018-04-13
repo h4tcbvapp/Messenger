@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
-import { Message } from './model';
+import { Message } from '../../model/message';
 
 @Component({
     selector: 'messages-create',
