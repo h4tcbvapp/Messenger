@@ -1,16 +1,7 @@
 ﻿<Properties StartupConfiguration="{C74AABEA-3AFB-43C3-A9E5-8C768C8B8710}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp Status">
     <Files>
-      <File FileName="BVAppDAL/DAL/MessageDAL.cs" Line="49" Column="37" />
-      <File FileName="BVAppDAL/Models/MessageRecipient.cs" Line="8" Column="1" />
-      <File FileName="BVAppDAL/Models/Party.cs" Line="1" Column="1" />
-      <File FileName="BVAppDAL/Models/Phone.cs" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/Controllers/TokenController.cs" Line="1" Column="1" />
-      <File FileName="BVAppDAL/DAL/AccountDAL.cs" Line="121" Column="61" />
-      <File FileName="h4tcbvapp/Controllers/MessageController.cs" Line="32" Column="17" />
-      <File FileName="h4tcbvapp/Classes/NotificationModel.cs" Line="35" Column="1" />
-      <File FileName="h4tcbvapp/Controllers/MessagesController.cs" Line="23" Column="1" />
-      <File FileName="BVAppDAL/DAL/PartyDAL.cs" Line="1" Column="1" />
+      <File FileName="h4tcbvapp/Controllers/MessageController.cs" Line="33" Column="13" />
       <File FileName="h4tcbvapp Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

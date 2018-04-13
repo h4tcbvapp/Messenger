@@ -18,6 +18,7 @@ namespace h4tcbvapp.Controllers
 
             var recipList = new List<NotificationRecipient>();
 
+            // parse the array of recipient ids and create NotificationRecipients
             foreach (var item in message.To)
             {
                 var recipJson = accountDAL.RecipientSelect(int.Parse(item));
@@ -27,6 +28,11 @@ namespace h4tcbvapp.Controllers
                     recipList.Add(JsonConvert.DeserializeObject<NotificationRecipient>(recipJson));
                 }
             }
+
+            // TODO: complete the logic to retrieve information to save a new message
+
+
+            // TODO: add logic after a successful message save to send a Notification
 
             return new MockMessageEntity { ID = 1 };
 
