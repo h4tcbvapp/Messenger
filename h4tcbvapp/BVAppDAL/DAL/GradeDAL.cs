@@ -3,11 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BVAppDAL.Models;
+using Newtonsoft.Json;
 
 namespace BVAppDAL.DAL
 {
     public class GradeDAL
     {
+        public string GetGrades()
+        {
+            // all grades
+            string json = string.Empty;
+
+            try
+            {
+                using (var context = new bvappContext())
+                {
+                    var query = (from a in context.Grade
+                                 orderby a.GradeId descending
+                                 select a);
+
+                    json = JsonConvert.SerializeObject(query);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+            return json;
+        }
+
         public bool Save(string pGradeName)
         {
             try

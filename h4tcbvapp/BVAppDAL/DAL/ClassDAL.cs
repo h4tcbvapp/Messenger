@@ -4,11 +4,36 @@ using System.Linq;
 using System.Threading.Tasks;
 using BVAppDAL.Models;
 using BVAppDAL.Models;
+using Newtonsoft.Json;
 
 namespace BVAppDAL.DAL
 {
     public class ClassDAL
     {
+        public string GetClass()
+        {
+            // all classes (class name)
+            string json = string.Empty;
+
+            try
+            {
+                using (var context = new bvappContext())
+                {
+                    var query = (from a in context.Class
+                                 orderby a.ClassId descending
+                                 select a);
+
+                    json = JsonConvert.SerializeObject(query);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+            return json;
+        }
+
         public bool Save(string pClassName, int pGradeId)
         {
             try
