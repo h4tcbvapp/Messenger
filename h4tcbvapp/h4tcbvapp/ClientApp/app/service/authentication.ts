@@ -11,7 +11,7 @@ export class AuthenticationService {
 
       private apiUrl = 'https://h4tcbvapp.azurewebsites.net'
 
-      constructor(private http: Http){ }
+      constructor(private http: Http, private header: Headers){ }
       // list users (Admin functionality)
 
       getUser(): Observable<User[]>  {
@@ -22,22 +22,18 @@ export class AuthenticationService {
 
 
       public loginWithToken(user: User): Observable<boolean> {
-            const header = new Headers();
-            header.append("Content-Type","application/json");
-            console.log("Stringified user: " + JSON.stringify(user));
-            return this.http.post('/api/Token', JSON.stringify(user), { headers: header })
+            return this.http.post('/api/Token', JSON.stringify(user), { headers: this.header })
                 .map((response: Response) => {
                     // login successful if there's a jwt token in the response
                     let token = response.json() && response.json().token;
                     if (token) {
                         // set token property
                         user.token = token;
-    
+                        this.header.append("Authorization", token);
+
                         // store username and jwt token in local storage to keep user logged in between page refreshes
                         localStorage.setItem('currentUser', JSON.stringify(user));
 
-                        console.log(user);
-                        console.log(token);
                         // return true to indicate successful login
                         return true;
                     } else {

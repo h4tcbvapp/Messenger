@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Headers } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
@@ -14,7 +14,6 @@ import { ListMessagesComponent } from './components/messages/list.component';
 import { LoginComponent } from './components/login/login.component';
 import { MessageService } from './service/message';
 import { AuthenticationService } from './service/authentication';
-import { Headers } from '\@angular/http';
 
 @NgModule({
     declarations: [
@@ -29,7 +28,8 @@ import { Headers } from '\@angular/http';
     ],
     providers: [
         { provide: MessageService, useClass: MessageService},
-        { provide: AuthenticationService, useClass: AuthenticationService}
+        { provide: AuthenticationService, useClass: AuthenticationService},
+        { provide: Headers, useFactory: commonHeaders}
     ],
     imports: [
         CommonModule,
@@ -48,4 +48,10 @@ import { Headers } from '\@angular/http';
     ]
 })
 export class AppModuleShared {
+}
+
+export function commonHeaders(): Headers {
+    const header = new Headers();
+    header.append("Content-Type","application/json");
+    return header;
 }
