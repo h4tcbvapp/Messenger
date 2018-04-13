@@ -25,7 +25,6 @@
 /Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.runtimeconfig.dev.json
 /Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.dll
 /Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.pdb
-/Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.csprojResolveAssemblyReference.cache
 /Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.csproj.CoreCompileInputs.cache
 /Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfoInputs.cache
 /Users/eoj7493/Dev/h4tcbvapp/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfo.cs

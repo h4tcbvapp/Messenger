@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{C74AABEA-3AFB-43C3-A9E5-8C768C8B8710}|Default" GitUserInfo="UsingGIT">
+﻿<Properties StartupConfiguration="{2EF3E3F0-8F05-4C20-ABB5-E8134537AC18}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp Status">
     <Files>
       <File FileName="h4tcbvapp Status" />
@@ -11,4 +11,5 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.h4tcbvapp PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BVAppDAL PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

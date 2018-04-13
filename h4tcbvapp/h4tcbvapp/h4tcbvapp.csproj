@@ -30,11 +30,7 @@
     <Folder Include="ClientApp\app\components\messages\" />
     <Folder Include="ClientApp\app\model\" />
     <Folder Include="ClientApp\app\service\" />
-<<<<<<< HEAD
     <Folder Include="ClientApp\app\components\login\" />
-=======
-    <Folder Include="Services\" />
->>>>>>> 3a32bb46a181916012f0dfcf0410dd343f85b390
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BVAppDAL\BVAppDAL.csproj" />
