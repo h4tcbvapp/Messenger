@@ -25,8 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\app\components\createaccount\" />
-    <Folder Include="ClientApp\app\components\list-messages\" />
+    <Folder Include="ClientApp\app\components\account\" />
+    <Folder Include="ClientApp\app\components\messages\" />
   </ItemGroup>
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->

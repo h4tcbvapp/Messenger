@@ -2,8 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
 
 @Component({
-    selector: 'list-messages',
-    templateUrl: './list.messages.component.html'
+    selector: 'messages-list',
+    templateUrl: './list.component.html'
 })
 export class ListMessagesComponent {
     public messages: Messages[];

@@ -9,8 +9,8 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
-import { CreateAccountComponent } from './components/createaccount/create.account.component';
-import { ListMessagesComponent } from './components/list-messages/list.messages.component';
+import { CreateAccountComponent } from './components/account/create.component';
+import { ListMessagesComponent } from './components/messages/list.component';
 
 @NgModule({
     declarations: [
