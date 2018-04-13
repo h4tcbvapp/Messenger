@@ -17,7 +17,7 @@ namespace h4tcbvapp.Classes
             get;
             set;
         }
-   
+
         public Dictionary<string, string> Recipients
         {
             get;
@@ -27,6 +27,39 @@ namespace h4tcbvapp.Classes
         public NotificationModel()
         {
             Recipients = new Dictionary<string, string>();
+        }
+    }
+
+    public class NotificationRecipient
+    {
+        public int PartyId
+        {
+            get;
+            set;
+        }
+
+        public string RecipName
+        {
+            get;
+            set;
+        }
+
+        public string RecipAddress
+        {
+            get;
+            set;
+        }
+
+        public string PhoneNumber
+        {
+            get;
+            set;
+        }
+
+        public string SmsGateway
+        {
+            get;
+            set;
         }
     }
 
@@ -61,6 +94,6 @@ namespace h4tcbvapp.Classes
             get;
             set;
         }
-}
+    }
 
 }

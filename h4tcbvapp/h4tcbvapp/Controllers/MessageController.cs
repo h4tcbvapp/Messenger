@@ -1,6 +1,10 @@
-﻿using System;
+﻿using BVAppDAL.DAL;
+using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using h4tcbvapp.Classes;
 
 namespace h4tcbvapp.Controllers
 {
@@ -10,7 +14,22 @@ namespace h4tcbvapp.Controllers
         [HttpPost("[action]"), Authorize]
         public MockMessageEntity Post(Message message)
         {
-            return new MockMessageEntity { ID = 42 };
+            var accountDAL = new AccountDAL();
+
+            var recipList = new List<NotificationRecipient>();
+
+            foreach (var item in message.To)
+            {
+                var recipJson = accountDAL.RecipientSelect(int.Parse(item));
+
+                if (!string.IsNullOrWhiteSpace(recipJson))
+                {
+                    recipList.Add(JsonConvert.DeserializeObject<NotificationRecipient>(recipJson));
+                }
+            }
+
+            return new MockMessageEntity { ID = 1 };
+
         }
     }
 
@@ -22,7 +41,7 @@ namespace h4tcbvapp.Controllers
     public class Message
     {
         public string From { get; set; }
-        public string To { get; set; }
+        public string[] To { get; set; }
         public string Text { get; set; }
     }
 }

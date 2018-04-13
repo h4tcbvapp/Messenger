@@ -20,10 +20,10 @@ namespace BVAppDAL.DAL
             {
                 var query = (from a in context.Account
                              join p in context.Party on a.PartyId equals p.PartyId
-                    where a.UserName == userName && a.Password == str && p.IsActive == "Y"
-                    select a).FirstOrDefault();
+                             where a.UserName == userName && a.Password == str && p.IsActive == "Y"
+                             select a).FirstOrDefault();
 
-                if (query!= null && (!string.IsNullOrEmpty(query.UserName)))
+                if (query != null && (!string.IsNullOrEmpty(query.UserName)))
                     return true;
 
                 return false;
@@ -56,6 +56,79 @@ namespace BVAppDAL.DAL
                 throw Ex;
             }
             return sLogin;
+        }
+
+        public string UserSelect(string userName, string password)
+        {
+            string sLogin = "";
+            try
+            {
+                byte[] str = PasswordToSSH(password);
+
+                using (var context = new bvappContext())
+                {
+                    var query = (from a in context.Account
+                                 join p in context.Party on a.PartyId equals p.PartyId
+                                 where a.UserName == userName && a.Password == str && p.IsActive == "Y"
+                                 select new
+                                 {
+                                     Name = string.Concat(p.FirstName, " ", p.LastName).Trim(),
+                                     Email = p.EmailAddress
+                                 }
+                                ).FirstOrDefault();
+
+                    if (query != null && (!string.IsNullOrEmpty(query.Name)))
+                    {
+                        sLogin = JsonConvert.SerializeObject(query);
+                    }
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+            return sLogin;
+        }
+
+
+        /// <summary>
+        /// Retrieve Recipient information formatted for sending an SMTP message
+        /// </summary>
+        /// <returns>A Json string representation of the selected recipient.</returns>
+        /// <param name="partyId">Party identifier of the intended recipient.</param>
+        public string RecipientSelect(int partyId)
+        {
+            string recip = "";
+            const string addressSep = "@";
+            using (var context = new bvappContext())
+            {
+                var query = (from a in context.Account
+                             join p in context.Party on a.PartyId equals p.PartyId
+                             join phn in context.Phone on a.PartyId equals phn.PartyId
+                             join pcr in context.PhoneCareer on phn.PhoneCareerId equals pcr.PhoneCareerId
+                             where a.PartyId == partyId && p.IsActive == "Y"
+                             select new
+                             {
+                                 a.PartyId,
+                                 RecipName = string.Concat(p.FirstName, " ", p.LastName).Trim(),
+                                 RecipAddress = string.Concat(phn.PhoneNumber,
+                                                              pcr.Smsgateway.StartsWith(addressSep, StringComparison.CurrentCulture)
+                                                                ? string.Empty
+                                                                : addressSep
+                                                              , pcr.Smsgateway).Trim(),
+                                 phn.PhoneNumber,
+                                 SmsGateway = pcr.Smsgateway
+                             }
+                            ).FirstOrDefault();
+
+                if (query != null && (!string.IsNullOrEmpty(query.RecipAddress)))
+                {
+                    recip = JsonConvert.SerializeObject(query);
+                }
+
+            }
+            return recip;
         }
 
         public Boolean CreateLogin(int partyId, string userName, string password)
@@ -91,7 +164,7 @@ namespace BVAppDAL.DAL
 
                 return true;
             }
-            catch(Exception Ex)
+            catch (Exception Ex)
             {
                 throw Ex;
             }
