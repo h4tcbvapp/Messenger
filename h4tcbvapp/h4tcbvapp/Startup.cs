@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BVAppDAL.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -48,6 +50,9 @@ namespace h4tcbvapp
             {
                 c.SwaggerDoc("v1", new Info { Title = "Buena Vista API", Version = "v1" });
             });
+
+            services.AddDbContext<bvappContext>(options =>
+                                                  options.UseSqlServer(Configuration.GetConnectionString("bvappEntities3")));
 
             /* Unocmment to allow CORS.  Don't forget to also uncomment the line in Configure() menthod.
             services.AddCors(options =>

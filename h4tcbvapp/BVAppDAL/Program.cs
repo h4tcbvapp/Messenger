@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+//TODO: figure out how to make this project just a DLL - it started as a seperate web solution....
 namespace BVAppDAL
 {
     public class Program
