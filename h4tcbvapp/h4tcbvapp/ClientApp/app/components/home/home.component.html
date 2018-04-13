@@ -1,35 +1,59 @@
-<div class=''>
-            <ul class="">
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/home']">
-                        <span class='glyphicon glyphicon-home'></span> Home
-                    </a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/Student']">
-                        <span class='glyphicon glyphicon-education'></span> Counter
-                    </a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/Classes']">
-                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
-                    </a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/Classes']">
-                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
-                    </a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/create-account']">
-                        <span class='glyphicon glyphicon-th-list'></span> Create account
-                    </a>
-                </li>
-                <li [routerLinkActive]="['list-messages']">
-                    <a [routerLink]="['/list-messages']">
-                        <span class='glyphicon glyphicon-th-list'></span> Messages
-                    </a>
-                </li>
-            </ul>
-        </div>
+               <!-- Dashboard - Landing Page Partial -->
 
+               <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-6 text-center">
+                           <a href="messages-landing.html">
+                             <div class="card dashboard-tile">
+                              <div class="card-body">
+                                <p class="card-text mb-1"><i class="fas fa-comment-alt fa-3x"></i></p>
+                                <h6 class="card-title mb-0">Messages</h6>
+                              </div>
+                            </div>
+                            </a> 
+                        </div>
+                        
+                        <div class="col-6 text-center">
+                           <a href="#">
+                             <div class="card dashboard-tile">
+                              <div class="card-body">
+                                <p class="card-text mb-1">
+                                <i class="fas fa-calendar fa-3x"></i></p>
+                                <h6 class="card-title mb-0">Calendar</h6>
+                              </div>
+                            </div>
+                            </a> 
+                        </div>
+                        
+                    </div>
+                </div>   
+                
+                            
+                 <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-6 text-center">
+                           <a href="#">
+                             <div class="card dashboard-tile">
+                              <div class="card-body">
+                                <p class="card-text mb-1"><i class="fas fa-user fa-3x"></i></p>
+                                <h6 class="card-title mb-0">My Account</h6>
+                              </div>
+                            </div>
+                            </a> 
+                        </div>
+                        
+                        <div class="col-6 text-center">
+                           <a href="#">
+                             <div class="card dashboard-tile">
+                              <div class="card-body">
+                                <p class="card-text mb-1"><i class="fas fa-clipboard-list fa-3x"></i></p>
+                                <h6 class="card-title mb-0">Admin</h6>
+                              </div>
+                            </div>
+                            </a> 
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            <!-- End of Dashboard - Landing Page Partial -->

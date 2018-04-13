@@ -36,3 +36,16 @@ body {
 .smaller25 {
     font-size: 75%;
 }
+
+.dashboard-tile {
+    background-color: #8d1b35;
+    color: #ffffff;
+}
+
+.dashboard-tile:hover {
+    background-color: #621325;
+}
+
+.dashboard-tile i {
+    color: #ffffff;
+}
