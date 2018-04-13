@@ -52,7 +52,7 @@ namespace h4tcbvapp
             });
 
             services.AddDbContext<bvappContext>(options =>
-                                                  options.UseSqlServer(Configuration.GetConnectionString("bvappEntities3")));
+                                                options.UseSqlServer(Configuration.GetConnectionString("bvConnection")));
 
             /* Unocmment to allow CORS.  Don't forget to also uncomment the line in Configure() menthod.
             services.AddCors(options =>
