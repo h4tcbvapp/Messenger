@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace h4tcbvnotification.Classes
+namespace hh4tcbvapp.Classes
 {
     public class NotificationModel
     {

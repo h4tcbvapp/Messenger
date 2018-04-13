@@ -1,17 +1,15 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { Message } from '../../model/message';
 
 @Component({
     selector: 'messages-list',
     templateUrl: './list.component.html'
 })
 export class ListMessagesComponent {
-    public messages: Messages[];
+    public messages: Message[];
 
     constructor(http: Http, @Inject('BASE_URL') baseUrl: string) {
-        //http.get(baseUrl + 'api/messages').subscribe(result => {
-        //    this.messages = result.json() as Messages[];
-        //}, error => console.error(error));
         this.messages = [
             {
                 "from": "someone",
@@ -27,11 +25,4 @@ export class ListMessagesComponent {
             }
         ];
     }
-}
-
-interface Messages {
-    from: string;
-    to: string;
-    message: string;
-    date: Date;
 }

@@ -6,10 +6,12 @@ using SendGrid.Helpers.Mail;
 using Microsoft.Extensions.Configuration;
 using h4tcbvnotification.Classes;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace h4tcbvnotification.Controllers
+namespace h4tcbvapp.Controllers
 {
+    public class NotificationController : Controller
+    {
     [Route("api/[controller]")]
     public class NotificationController : Controller
     {

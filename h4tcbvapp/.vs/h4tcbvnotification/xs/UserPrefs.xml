@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{D43460C0-A967-4F5D-AE52-BB487EBBC860}|Default">
+﻿<Properties StartupConfiguration="{D43460C0-A967-4F5D-AE52-BB487EBBC860}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -6,5 +6,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.h4tcbvnotification PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.h4tcbvnotification PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
