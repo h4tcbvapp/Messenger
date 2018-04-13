@@ -8,13 +8,18 @@ import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { CreateAccountComponent } from './components/createaccount/create.account.component';
+import { ListMessagesComponent } from './components/list-messages/list.messages.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavMenuComponent,
         FetchDataComponent,
-        DashboardComponent
+        HomeComponent,
+        CreateAccountComponent,
+        ListMessagesComponent
     ],
     imports: [
         CommonModule,
@@ -24,7 +29,9 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent },
             { path: 'fetch-data', component: FetchDataComponent },
-            { path: '**', redirectTo: 'dashboard' }
+            { path: 'create-account', component: CreateAccountComponent },
+            { path: 'list-messages', component: ListMessagesComponent },
+            { path: '**', redirectTo: 'home' }
         ])
     ]
 })

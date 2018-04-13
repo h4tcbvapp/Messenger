@@ -27,6 +27,16 @@
                         <span class='glyphicon glyphicon-th-list'></span> Fetch data
                     </a>
                 </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/create-account']">
+                        <span class='glyphicon glyphicon-th-list'></span> Create account
+                    </a>
+                </li>
+                <li [routerLinkActive]="['list-messages']">
+                    <a [routerLink]="['/list-messages']">
+                        <span class='glyphicon glyphicon-th-list'></span> Messages
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{C74AABEA-3AFB-43C3-A9E5-8C768C8B8710}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp/ClientApp/app/components/fetchdata/fetchdata.component.html">
+    <Files>
+      <File FileName="h4tcbvapp/ClientApp/app/app.server.module.ts" Line="1" Column="1" />
+      <File FileName="h4tcbvapp/ClientApp/app/app.browser.module.ts" Line="1" Column="1" />
+      <File FileName="h4tcbvapp/ClientApp/app/app.shared.module.ts" Line="32" Column="72" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/navmenu/navmenu.component.ts" Line="8" Column="18" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/createaccount/create.account.component.ts" Line="11" Column="50" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/createaccount/create.account.component.html" Line="16" Column="36" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/navmenu/navmenu.component.html" Line="23" Column="25" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/fetchdata/fetchdata.component.ts" Line="1" Column="1" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/listMessages/list.messages.component.ts" Line="6" Column="10" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/listMessages/list.messages.component.html" Line="14" Column="66" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/fetchdata/fetchdata.component.html" Line="23" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.h4tcbvapp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

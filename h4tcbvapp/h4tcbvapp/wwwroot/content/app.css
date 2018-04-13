@@ -1,0 +1,38 @@
+body {
+    background-color: #ced4da;
+}
+
+.bg-side {
+    height: 100%;
+    background-color: #ced4da;
+}
+
+.paw-vertical {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bg-gray {
+    background-color: #f0f0f0;
+}
+
+.larger25 {
+    font-size: 125%;
+}
+
+.smaller25 {
+    font-size: 75%;
+}
