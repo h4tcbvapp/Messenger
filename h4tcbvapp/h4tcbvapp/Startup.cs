@@ -48,6 +48,18 @@ namespace h4tcbvapp
             {
                 c.SwaggerDoc("v1", new Info { Title = "Buena Vista API", Version = "v2" });
             });
+
+            /* Unocmment to allow CORS.  Don't forget to also uncomment the line in Configure() menthod.
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                      .AllowAnyMethod()
+                      .AllowAnyHeader()
+                      .AllowCredentials()
+                .Build());
+            });
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -79,6 +91,10 @@ namespace h4tcbvapp
 
 
             app.UseAuthentication();
+
+           /* Uncomment along with the code in ConfigureServices to allow CORS
+            app.UseCors("CorsPolicy");
+            */
 
             app.UseMvc(routes =>
             {
