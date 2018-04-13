@@ -5,7 +5,7 @@ import { Message } from '../model/message';
 @Injectable()
 export class MessageService {
 
-    private messages: Message[] = [
+    public messages: Message[] = [
         {
             "from": "someone",
             "to": "me",
@@ -23,14 +23,14 @@ export class MessageService {
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string) {}
 
     public async getMessages(student: string): Promise<Message[]> {
-        return this.messages;
+        return Promise.resolve(this.messages);
         // const response = await this.http.get(this.baseUrl + 'api/messages').toPromise();
         // return response.json() as Message[];
     }
 
-    public async createMessage(message: Message) {
+    public async createMessage(message: Message): Promise<Message> {
         this.messages.push(message);
-        return message;
+        return Promise.resolve(message);
         //const response = await this.http.post(this.baseUrl + 'api/messages', message).toPromise();
         //message.id = response.json() as string;
         //return message;

@@ -9,6 +9,7 @@
 /Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfo.cs
 /Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.dll
 /Users/ylivshitz/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.pdb
+<<<<<<< HEAD
 /Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.deps.json
 /Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.runtimeconfig.json
 /Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.runtimeconfig.dev.json
@@ -20,3 +21,16 @@
 /Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfo.cs
 /Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.dll
 /Users/j/Workspace/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.pdb
+=======
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.deps.json
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.runtimeconfig.json
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.runtimeconfig.dev.json
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.dll
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/bin/Debug/netcoreapp2.0/BVAppDAL.pdb
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.csprojResolveAssemblyReference.cache
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.csproj.CoreCompileInputs.cache
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfoInputs.cache
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.AssemblyInfo.cs
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.dll
+/Users/jonathan.hughes/Documents/hack/Messenger/h4tcbvapp/BVAppDAL/obj/Debug/netcoreapp2.0/BVAppDAL.pdb
+>>>>>>> 2eb2bd0104f17a5971d248df83f46e4b010cea47

@@ -1,7 +1,7 @@
 import { Component, Inject, Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { User } from '../components/user/user.component';
+import { User } from '../model/user';
 import { Response, Headers } from '\@angular/http';
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/catch';

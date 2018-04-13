@@ -8,9 +8,12 @@ import { Message } from '../../model/message';
     templateUrl: './list.component.html'
 })
 export class ListMessagesComponent {
+
+    public student: string;
+    
     public messages: Message[];
 
     constructor(http: Http, @Inject('BASE_URL') baseUrl: string, private messageService: MessageService) {
-        this.messages = this.messageService.listMessages();
+        this.messageService.getMessages(this.student).then((messages) => this.messages = messages);
     }
 }
