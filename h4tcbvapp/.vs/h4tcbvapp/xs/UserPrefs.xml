@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{C74AABEA-3AFB-43C3-A9E5-8C768C8B8710}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp/ClientApp/app/app.server.module.ts">
+  <MonoDevelop.Ide.Workbench ActiveDocument="h4tcbvapp/ClientApp/app/components/fetchdata/fetchdata.component.ts">
     <Files>
-      <File FileName="h4tcbvapp/ClientApp/app/components/navmenu/navmenu.component.html" Line="37" Column="38" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/navmenu/navmenu.component.ts" Line="8" Column="18" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/createaccount/create.account.component.ts" Line="7" Column="3" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/messages/list.component.html" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/messages/list.component.ts" Line="4" Column="13" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/app/app.component.html" Line="1" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/app/app.component.ts" Line="8" Column="26" />
-      <File FileName="h4tcbvapp/ClientApp/app/components/app/app.component.css" Line="7" Column="1" />
-      <File FileName="h4tcbvapp/ClientApp/app/app.shared.module.ts" Line="7" Column="47" />
-      <File FileName="h4tcbvapp/ClientApp/app/app.browser.module.ts" Line="4" Column="13" />
-      <File FileName="h4tcbvapp/ClientApp/app/app.server.module.ts" Line="1" Column="1" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/messages/create.component.html" Line="1" Column="1" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/messages/create.component.ts" Line="3" Column="47" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/messages/list.component.ts" Line="11" Column="5" />
+      <File FileName="h4tcbvapp/ClientApp/app/model/message.ts" Line="1" Column="1" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/messages/read.component.html" Line="17" Column="14" />
+      <File FileName="h4tcbvapp/ClientApp/app/service/message.ts" Line="7" Column="45" />
+      <File FileName="h4tcbvapp/ClientApp/app/components/fetchdata/fetchdata.component.ts" Line="15" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
