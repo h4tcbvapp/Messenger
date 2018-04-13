@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2016                    */
-/* Created on:     4/12/2018 9:21:59 PM                         */
+/* Created on:     4/13/2018 9:35:09 AM                         */
 /*==============================================================*/
 
 
@@ -396,18 +396,18 @@ go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('PhoneCareer')
-            and   name  = 'PhoneCareerIX1'
+           where  id    = object_id('PhoneCarrier')
+            and   name  = 'PhoneCarrierIX1'
             and   indid > 0
             and   indid < 255)
-   drop index PhoneCareer.PhoneCareerIX1
+   drop index PhoneCarrier.PhoneCarrierIX1
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('PhoneCareer')
+           where  id = object_id('PhoneCarrier')
             and   type = 'U')
-   drop table PhoneCareer
+   drop table PhoneCarrier
 go
 
 if exists (select 1
@@ -826,7 +826,7 @@ go
 /*==============================================================*/
 create table Phone (
    PhoneID              integer              identity,
-   PhoneCareerID        integer              not null,
+   PhoneCarrierID       integer              not null,
    PartyID              integer              not null,
    PhoneNumber          varchar(64)          not null,
    CreatedBy            varchar(128)         not null,
@@ -854,7 +854,7 @@ go
 
 
 
-create nonclustered index PhoneIX2 on Phone (PhoneCareerID ASC)
+create nonclustered index PhoneIX2 on Phone (PhoneCarrierID ASC)
 go
 
 /*==============================================================*/
@@ -868,28 +868,28 @@ create unique nonclustered index PhoneIX1 on Phone (PhoneNumber ASC)
 go
 
 /*==============================================================*/
-/* Table: PhoneCareer                                           */
+/* Table: PhoneCarrier                                          */
 /*==============================================================*/
-create table PhoneCareer (
-   PhoneCareerID        integer              identity,
-   PhoneCareerName      varchar(512)         not null,
+create table PhoneCarrier (
+   PhoneCarrierID       integer              identity,
+   PhoneCarrierName     varchar(512)         not null,
    SMSGateway           varchar(512)         not null,
    CreatedBy            varchar(128)         not null,
    CreatedDate          datetime             not null default getdate(),
    ModifiedBy           varchar(128)         null,
    ModifiedDate         datetime             null default getdate(),
-   constraint PK_PHONECAREER primary key (PhoneCareerID)
+   constraint PK_PHONECARRIER primary key (PhoneCarrierID)
 )
 go
 
 /*==============================================================*/
-/* Index: PhoneCareerIX1                                        */
+/* Index: PhoneCarrierIX1                                       */
 /*==============================================================*/
 
 
 
 
-create unique nonclustered index PhoneCareerIX1 on PhoneCareer (PhoneCareerName ASC)
+create unique nonclustered index PhoneCarrierIX1 on PhoneCarrier (PhoneCarrierName ASC)
 go
 
 /*==============================================================*/
@@ -1074,8 +1074,8 @@ alter table Party
 go
 
 alter table Phone
-   add constraint FK_PHONE_REFERENCE_PHONECAR foreign key (PhoneCareerID)
-      references PhoneCareer (PhoneCareerID)
+   add constraint FK_PHONE_REFERENCE_PHONECAR foreign key (PhoneCarrierID)
+      references PhoneCarrier (PhoneCarrierID)
 go
 
 alter table Phone
