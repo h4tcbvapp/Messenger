@@ -140,7 +140,7 @@ namespace BVAPP.DAL
                 {
                     var query = (from a in context.Message
                                  join p in context.MessageRecipient on a.MessageId equals p.MessageId
-                                 where p.ParentPartyId == recipientId || p.TeacherPartyId == recipientId
+                                 where p.ParentPartyId == recipientId || p.TeacherPartyId == recipientId || a.SenderPartyId == recipientId
                                  orderby a.CreatedDate descending
                                  select a);
 
