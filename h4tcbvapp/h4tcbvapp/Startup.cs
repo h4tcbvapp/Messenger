@@ -1,13 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using BVAppDAL.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace h4tcbvapp
@@ -24,6 +28,21 @@ namespace h4tcbvapp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = Configuration["Jwt:Issuer"],
+                        ValidAudience = Configuration["Jwt:Issuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+                    };
+                });
+            
             services.AddMvc();
 
             // Register the Swagger generator, defining one or more Swagger documents
@@ -31,6 +50,21 @@ namespace h4tcbvapp
             {
                 c.SwaggerDoc("v1", new Info { Title = "Buena Vista API", Version = "v1" });
             });
+
+            services.AddDbContext<bvappContext>(options =>
+                                                options.UseSqlServer(Configuration.GetConnectionString("bvConnection")));
+
+            /* Unocmment to allow CORS.  Don't forget to also uncomment the line in Configure() menthod.
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                      .AllowAnyMethod()
+                      .AllowAnyHeader()
+                      .AllowCredentials()
+                .Build());
+            });
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +94,12 @@ namespace h4tcbvapp
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Buena Vista API V1");
             });
 
+
+            app.UseAuthentication();
+
+           /* Uncomment along with the code in ConfigureServices to allow CORS
+            app.UseCors("CorsPolicy");
+            */
 
             app.UseMvc(routes =>
             {
